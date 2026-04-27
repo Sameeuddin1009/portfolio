@@ -114,7 +114,7 @@ export default function Home() {
               View projects
             </a>
             <a
-              href="https://linkedin.com/sameeuddin-rashad"
+              href="https://www.linkedin.com/in/sameeuddin-rashad-syed-4b5230234/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full border border-white/18 px-6 py-3 text-sm font-bold text-white transition hover:border-[#c8ef6a] hover:text-[#c8ef6a]"
