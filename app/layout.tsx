@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Sameeuddin Rashad Syed | Data Analyst Portfolio",
   description:
-    "Portfolio of Sameeuddin Rashad Syed, a Data Analyst and MIS Executive skilled in SQL, Excel, Power BI, Python, Google Sheets, and reporting automation.",
+    "Portfolio of Sameeuddin Rashad Syed, a Data Analyst and MIS Executive skilled in Advanced Excel, Power BI, SQL, KPI reporting, data validation, dashboard development, and workflow automation.",
   icons: {
     icon: [
       { url: "/favicon.ico?v=2", sizes: "any" },
