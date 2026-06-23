@@ -102,98 +102,91 @@ export default function Home() {
         </nav>
       </header>
 
-      <section id="home" className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-24">
-        <div>
-          <div className="mb-6 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2">
+      <section id="home" className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+        <div className="rounded-[8px] border border-white/10 bg-[#10161a] p-6 shadow-2xl shadow-black/30 md:p-10">
+          <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+            <div>
+              <div className="mb-6 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2">
             <span className="h-2 w-2 rounded-full bg-[#d9f66f]" />
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d9f66f]">{profile.role}</p>
-          </div>
-          <h1 className="max-w-4xl text-5xl font-black leading-[1.02] text-white sm:text-6xl lg:text-7xl">
-            Reliable reporting for better business decisions.
-          </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/68">
-            I build MIS reporting workflows, KPI dashboards, data validation systems, and automation tools that help
-            teams reduce manual work and act on clean, consistent business data.
-          </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#projects"
-              className="inline-flex items-center justify-center rounded-full bg-[#236a5b] px-6 py-3 text-sm font-black text-white transition hover:bg-[#2d806d]"
-            >
-              View work
-            </a>
-            <a
-              href={profile.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-white/16 px-6 py-3 text-sm font-black text-white transition hover:border-[#d9f66f] hover:text-[#d9f66f]"
-            >
-              LinkedIn
-            </a>
-          </div>
-          <div className="mt-10 grid gap-3 sm:grid-cols-3">
-            {["Advanced Excel", "Power BI", "SQL"].map((item) => (
-              <div key={item} className="rounded-[8px] border border-white/10 bg-white/[0.04] px-4 py-3 text-center text-sm font-bold text-white/78">
-                {item}
               </div>
-            ))}
-          </div>
-        </div>
-
-        <aside className="overflow-hidden rounded-[8px] border border-white/10 bg-[#10161a] shadow-2xl shadow-black/30">
-          <div className="border-b border-white/10 bg-[#151d21] p-6">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d9f66f]">Professional profile</p>
-            <h2 className="mt-4 text-3xl font-black text-white">{profile.name}</h2>
-            <p className="mt-2 text-base font-semibold text-white/68">Data Analyst | Business Analyst | MIS Experience</p>
-          </div>
-
-          <div className="p-6">
-            <div className="grid gap-3">
-              {[
-                ["Location", profile.location],
-                ["Email", profile.email],
-                ["Website", "sameeuddinrashad.in"],
-                ["LinkedIn", "sameeuddin-rashad"],
-              ].map(([label, value]) => (
-                <div key={label} className="grid gap-1 rounded-[8px] border border-white/10 bg-[#0b0f12] p-4 sm:grid-cols-[6rem_1fr] sm:items-center">
-                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-white/36">{label}</span>
-                  <span className="break-words text-sm font-semibold text-white/76">{value}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 rounded-[8px] border border-[#d9f66f]/20 bg-[#d9f66f]/8 p-5">
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d9f66f]">Core value</p>
-              <p className="mt-3 text-xl font-black leading-snug text-white">
-                Cleaning data, standardizing reports, and automating follow-ups so teams can trust the numbers.
+              <p className="text-sm font-bold uppercase tracking-[0.24em] text-white/44">{profile.name}</p>
+              <h1 className="mt-4 max-w-4xl text-4xl font-black leading-[1.04] text-white sm:text-5xl lg:text-6xl">
+                Data analyst in progress, building useful business insights.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/68">
+                I work with Excel, SQL, Power BI, and reporting automation to clean data, build dashboards, and support
+                decisions with clear analysis.
               </p>
             </div>
+
+            <div className="rounded-[8px] border border-white/10 bg-[#0b0f12] p-5">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d9f66f]">Open to roles</p>
+              <p className="mt-3 text-2xl font-black leading-tight text-white">Data Analyst & Business Analyst</p>
+              <div className="mt-6 grid gap-3 text-sm font-semibold text-white/72">
+                <p className="rounded-[8px] border border-white/10 bg-white/[0.03] p-3">{profile.location}</p>
+                <p className="rounded-[8px] border border-white/10 bg-white/[0.03] p-3">{profile.email}</p>
+                <p className="rounded-[8px] border border-white/10 bg-white/[0.03] p-3">sameeuddinrashad.in</p>
+              </div>
+            </div>
           </div>
-        </aside>
+
+          <div className="mt-8 flex flex-col justify-between gap-5 border-t border-white/10 pt-6 md:flex-row md:items-center">
+            <div className="flex flex-wrap gap-2">
+              {["Advanced Excel", "Power BI", "SQL", "Data Validation"].map((item) => (
+                <span key={item} className="rounded-full bg-[#1d2921] px-3 py-1 text-sm font-bold text-[#daf88a]">
+                  {item}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#projects"
+                className="inline-flex items-center justify-center rounded-full bg-[#236a5b] px-6 py-3 text-sm font-black text-white transition hover:bg-[#2d806d]"
+              >
+                View work
+              </a>
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-white/16 px-6 py-3 text-sm font-black text-white transition hover:border-[#d9f66f] hover:text-[#d9f66f]"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="profile" className="border-y border-white/10 bg-[#0d1114]">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#d9f66f]">Professional summary</p>
-            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl">
-              Analyst focused on clean data, repeatable reporting, and process clarity.
-            </h2>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-[8px] border border-white/10 bg-[#10161a] p-6">
-              <h3 className="text-lg font-black text-white">What I do</h3>
-              <p className="mt-4 text-base leading-7 text-white/66">
-                Transform operational data into actionable business insights through dashboards, KPI reports, data
-                validation, and reporting standards.
+        <div className="mx-auto max-w-6xl px-5 py-16">
+          <div className="grid gap-10 md:grid-cols-[1fr_0.9fr] md:items-start">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#d9f66f]">About me</p>
+              <h2 className="mt-4 max-w-3xl text-3xl font-black leading-tight sm:text-4xl">
+                I am building my career around data analysis, business insight, and continuous learning.
+              </h2>
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-white/66">
+                My MIS experience has given me hands-on exposure to operational data, reporting workflows, validation,
+                and automation. I want to use that foundation to grow into Data Analyst and Business Analyst roles where
+                I can analyze problems, create clear dashboards, and support better decisions.
               </p>
             </div>
+
             <div className="rounded-[8px] border border-white/10 bg-[#10161a] p-6">
-              <h3 className="text-lg font-black text-white">How I work</h3>
-              <p className="mt-4 text-base leading-7 text-white/66">
-                Build practical workflows with Advanced Excel, Power BI, SQL, Google Sheets, and Apps Script to reduce
-                manual effort and improve consistency.
-              </p>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d9f66f]">I am focused on</p>
+              <div className="mt-5 space-y-4">
+                {[
+                  "Strengthening SQL, Power BI, Excel, and business analysis skills.",
+                  "Learning new tools and improving my analytical thinking continuously.",
+                  "Turning raw data into clear reports, insights, and recommendations.",
+                ].map((item) => (
+                  <p key={item} className="border-t border-white/10 pt-4 text-base leading-7 text-white/68">
+                    {item}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -309,6 +302,14 @@ export default function Home() {
               className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-black text-white transition hover:bg-white/10"
             >
               sameeuddinrashad.in
+            </a>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-black text-white transition hover:bg-white/10"
+            >
+              LinkedIn
             </a>
             <a
               href="tel:+917285977299"
