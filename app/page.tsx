@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
 
       <section id="home" className="mx-auto max-w-6xl px-5 py-16 md:py-20">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="reveal flex flex-col justify-center">
             <p className="text-sm text-ink-soft">{profile.role}</p>
             <h1 className="mt-4 max-w-xl font-serif text-4xl font-semibold leading-[1.12] text-ink sm:text-5xl">
@@ -51,21 +51,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="reveal reveal-delay-1 relative min-h-[360px] overflow-hidden border border-rule sm:min-h-[440px] lg:min-h-0">
-            <Image
-              src="/photo.jpg"
-              alt={profile.name}
-              fill
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-accent/10 mix-blend-multiply" />
-            <div
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5"
-              style={{ background: "linear-gradient(to bottom, transparent, var(--paper))" }}
-            />
-            <div className="absolute bottom-4 left-4 font-mono text-xs text-paper drop-shadow-sm">
-              {profile.name}
+          <div className="reveal reveal-delay-1 flex flex-col">
+            <div className="relative aspect-[4/5] w-full overflow-hidden border border-ink/80">
+              <Image
+                src="/photo.jpg"
+                alt={profile.name}
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="mt-3 flex items-baseline justify-between border-t border-rule pt-3">
+              <span className="font-serif text-base font-semibold text-ink">{profile.name}</span>
+              <span className="font-mono text-xs text-ink-soft">{profile.location}</span>
             </div>
           </div>
         </div>
